@@ -19,6 +19,7 @@ function getDateURL(url) {
 }
 
 function scrapeOdds() {
+
     const baseURL = 'https://classic.sportsbookreview.com/betting-odds/ncaa-basketball/?date=';
 
     URL = getDateURL(baseURL);
@@ -44,7 +45,7 @@ function scrapeOdds() {
                 writeOutObj[teams[i]] = odds[i];
             }
             const objString = JSON.stringify(writeOutObj);
-            fs.writeFileSync("../data/odds.json", objString);
+            fs.writeFileSync('./data/odds.json', objString);
 
         } else {
             console.error("?????")
@@ -53,8 +54,6 @@ function scrapeOdds() {
         .catch((err) => {
             console.log(err);
         })
+};
 
-
-}
-
-scrapeOdds();
+module.exports = { scrapeOdds };

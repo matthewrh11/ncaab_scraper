@@ -16,13 +16,13 @@ function generateGameData() {
     const results = []
 
     rp(url).then((csv) => {
-        fs.writeFileSync("../data/scraped_data.csv", csv);
+        fs.writeFileSync("./data/scraped_data.csv", csv);
     })
         .catch((err) => {
             console.error(err);
         });
 
-    fs.createReadStream('../data/scraped_data.csv')
+    fs.createReadStream('./data/scraped_data.csv')
         .pipe(csv())
         .on('data', (data) => {
             if (getDateString() === data.date && !results.find((result) => result.opponent === data.team)) {
@@ -30,8 +30,8 @@ function generateGameData() {
             }
         })
         .on('end', () => {
-            fs.writeFileSync("../data/game_data.json", JSON.stringify(results));
+            fs.writeFileSync("./data/game_data.json", JSON.stringify(results));
         });
-}
+};
 
-generateGameData();
+module.exports = { generateGameData };

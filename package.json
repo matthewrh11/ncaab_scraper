@@ -1,8 +1,8 @@
 {
   "name": "ncaab_scaper",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Scrape and help make picks!",
+  "main": "./src/pickSelector.js",
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
     "csv-parser": "^3.0.0",
@@ -12,7 +12,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/pickSelector.js"
   },
   "repository": {
     "type": "git",
