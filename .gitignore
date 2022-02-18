@@ -1,4 +1,2 @@
 node_modules/
-data/scraped_data.csv
-data/game_data.json
-data/odds.json
+data/
