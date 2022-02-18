@@ -1,0 +1,27 @@
+{
+  "name": "ncaab_scaper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "csv-parser": "^3.0.0",
+    "puppeteer": "^13.3.2",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewrh11/ncaab_scraper.git"
+  },
+  "author": "matthewrh11",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthewrh11/ncaab_scraper/issues"
+  },
+  "homepage": "https://github.com/matthewrh11/ncaab_scraper#readme"
+}
